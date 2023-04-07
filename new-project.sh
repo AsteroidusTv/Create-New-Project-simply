@@ -4,13 +4,13 @@ echo -n "Name for project: "
 read name
 
 # Move to the parent directory of where the script is executed
-cd ..
+cd /home/achille/Documents/Projects/Html
 
 # Create the directory for the project in the Html directory
-mkdir -p Html/"$name"
+mkdir "$name"
 
 # Move to the project directory
-cd Html/"$name"
+cd "$name"
 
 # Create the index.html and style.css files
 touch index.html style.css
@@ -34,4 +34,4 @@ subl index.html style.css
 
 # Open file explorer
 xdg-open .
-y
+
