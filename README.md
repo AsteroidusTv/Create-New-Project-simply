@@ -3,8 +3,8 @@
 
 ## For using this script you need to 
 
-* Make main.sh executable (`chmod +x main.sh`)
-* Execute main.sh (`./main.sh`)
+* Make main.sh executable `chmod +x main.sh`
+* Execute main.sh `./main.sh`
 * Go to your desktop right click on the app icon. 
 * Choose "Allow launching"
 
