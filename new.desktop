@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=New project
-Comment=Do git add git commit and git push
-Exec=/home/achille/Documents/Projects/Bash/new-project.sh
-X-GNOME-UsesNotifications=false
-Type=Application
-Terminal=true
-
