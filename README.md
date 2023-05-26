@@ -5,7 +5,7 @@
 
 * Make main.sh executable `chmod +x main.sh`
 * Execute main.sh `./main.sh`
-* Change the `file=` and the incon `incon=` in new-project.desktop 
+* Change the `file=` and the incon `incon=` location in new-project.desktop 
 * Go to your desktop right click on the app icon. 
 * Choose "Allow launching"
 
