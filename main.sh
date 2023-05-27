@@ -5,7 +5,7 @@ chmod +x "./code/config.sh" "./code/create.sh" "new-project.desktop"
 
 #!/bin/bash
 
-desktop_dir="$HOME/Desktop"
+app_dir="$HOME/.local/share/applications"
 new_project_dir="new-project.desktop"
 
 # Move the new-project directory to /Desktop
