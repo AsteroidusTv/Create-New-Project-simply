@@ -57,17 +57,30 @@ if [[ "$lowercase_directory" == *"html"* ]]; then
     cd "$folder_name"
 
     # Create the index.html file
-    echo "<html>
+    echo "
+    <!DOCTYPE html>
+    <html lang="en">
     <head>
-        <link rel='stylesheet' type='text/css' href='style.css'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style/sytle.css">
+        <title>$folder_name</title>
     </head>
     <body>
-        <h1>My index.html file</h1>
+        
     </body>
     </html>" > index.html
-
+    mkdir style
+    cd style
     # Create the style.css file
-    echo "/* CSS Styles */" > style.css
+    echo "* {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+  }" > style.css
+    cd ..
 
     # Display a confirmation message
     echo "Folder '$folder_name' created successfully."
