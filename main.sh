@@ -2,7 +2,7 @@
 
 # Variables
 file="./data/new_config.conf"
-app_dir="$HOME/Desktop"
+app_dir="$HOME/.local/share/applications"
 new_project_dir="new-project.desktop"
 
 
@@ -13,7 +13,6 @@ if [ -s "$file" ]; then
 else
     # Make executable all 
     chmod +x "./code/config.sh" "./code/create.sh" "new-project.desktop"
-    sleep 1s
     # Move the new-project directory to /Desktop
     mv "$new_project_dir" "$desktop_dir/"
     # Execute confing.sh and create.sh
