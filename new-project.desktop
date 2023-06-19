@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=New
+Exec=/change/this/path
+Icon=/change/this/path
+X-GNOME-UsesNotifications=true
+Type=Application
+Terminal=true
