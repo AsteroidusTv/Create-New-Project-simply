@@ -9,7 +9,7 @@ cd "$directory_path/$file_name"
 git init
 
 # Ask the user for the folder name
-read -p "Enter the folder name: " folder_name
+read -p "Enter the project name: " folder_name
 
 # Create the folder with cargo     
 cargo new $folder_name

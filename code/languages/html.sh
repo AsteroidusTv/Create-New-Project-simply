@@ -10,7 +10,7 @@ git init
 
 # Ask the user for the folder name
     
-    read -p "Enter the folder name: " folder_name
+    read -p "Enter the project name: " folder_name
 
     # Create the folder with the given name
     mkdir "$folder_name"
