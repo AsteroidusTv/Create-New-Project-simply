@@ -8,7 +8,7 @@ cd "$directory_path"
 folder_exists=false
 
 while [ "$folder_exists" = false ]; do
-  read -p "Enter a folder name: " folder_name
+  read -p "Enter the name of a parent folder (Ex. html, rust, go) : " folder_name
 
   if [ -d "$folder_name" ]; then
     echo "Folder exists."
@@ -39,11 +39,7 @@ while [ "$folder_exists" = false ]; do
   fi
 done
 
-# Get the absolute path of the current directory
-current_directory=$(pwd)
-
 # Convert the path to lowercase for comparison
-lowercase_directory=$(echo "$current_directory" | tr '[:upper:]' '[:lower:]')
 lowercase_folder_name=$(echo "$folder_name" | tr '[:upper:]' '[:lower:]')
   
 # Check if the current directory is "html" or "Html"
