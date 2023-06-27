@@ -9,9 +9,12 @@ cd "$directory_path/$file_name"
 git init
 
 # Ask the user for the folder name
+    
 read -p "Enter the folder name: " folder_name
 
 # Create the folder with cargo     
-cargo new $folder_name
+mkdir $folder_name
 cd $folder_name
-cargo build
+go mod init $folder_name
+mkdir src
+touch src/main.go

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 config_file="./data/new_config.conf"
 code_choice=$(grep "code_choice" "$config_file" | cut -d'=' -f2 | tr -d ' ' | tr -d '"')
 directory_path=$(grep "directory_path" "$config_file" | cut -d'=' -f2 | tr -d ' ' | tr -d '"')
@@ -46,7 +45,10 @@ current_directory=$(pwd)
 # Convert the path to lowercase for comparison
 lowercase_directory=$(echo "$current_directory" | tr '[:upper:]' '[:lower:]')
 lowercase_folder_name=$(echo "$folder_name" | tr '[:upper:]' '[:lower:]')
-
-cd "$current_dir"
-echo "$current_dir"
+  
+# Check if the current directory is "html" or "Html"
+cd $current_dir
+echo "file=\"$folder_name\"" >> ../data/new_config.conf
 ./languages/$lowercase_folder_name.sh
+sed -i '3d' "../data/new_config.conf"
+
