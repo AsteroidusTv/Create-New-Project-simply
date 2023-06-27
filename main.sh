@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+directory=/home/achille/Documents/Projects/Bash/Create-New-Project-simply
+cd $directory
 
 # Variables
 file="./data/new_config.conf"
@@ -12,9 +15,9 @@ if [ -s "$file" ]; then
 
 else
     # Make executable all 
-    chmod +x "./code/config.sh" "./code/create.sh" "new-project.desktop"
+    chmod -R +x .
     # Move the new-project directory to /Desktop
-    mv "$new_project_dir" "$desktop_dir/"
+    mv "$new_project_dir" "$app_dir"
     # Execute confing.sh and create.sh
     ./code/config.sh
     ./code/create.sh
