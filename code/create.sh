@@ -47,4 +47,6 @@ cd $current_dir
 echo "file=\"$folder_name\"" >> ../data/new_config.conf
 ./languages/$lowercase_folder_name.sh
 sed -i '3d' "../data/new_config.conf"
+bash $code_choice
+xdg-open .
 

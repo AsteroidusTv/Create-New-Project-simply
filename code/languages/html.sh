@@ -67,7 +67,6 @@ cd "$directory_path/$file_name"
       echo "Folder '$folder_name' created successfully."
       echo "Files 'index.html' and 'style.css' have been created inside."
 
-      xdg-open .
       open $current_directory/$folder_name/index.html
   else 
     echo "
