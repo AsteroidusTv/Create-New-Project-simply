@@ -5,9 +5,6 @@ file_name=$(grep "file" "$config_file" | cut -d'=' -f2 | tr -d ' ' | tr -d '"')
 
 cd "$directory_path/$file_name"
 
-# Initialize git
-git init
-
 # Ask the user for the folder name
     
     read -p "Enter the project name: " folder_name
@@ -17,6 +14,9 @@ git init
 
     # Move into the created folder
     cd "$folder_name"
+
+    #Initialize the file
+    git init
 
     # Create the index.html file
     read -p "Do you want to include a JavaScript file? (yes [Y]/no [N]): " include_js
@@ -39,20 +39,18 @@ git init
     
 
       echo "
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" type="text/css" href="./style/style.css">
-          <script type="text/javascript" src="./script/script.js"></script>
-          <script 
-          <title>$folder_name</title>
-      </head>
-      <body>
-          
-      </body>
-      </html>" > index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script type="text/javascript" src="./script/script.js" defer></script>
+    <title>$folder_name</title>
+  </head>
+  <body> 
+  </body>
+</html>" > index.html
       mkdir style
       cd style
       # Create the style.css file
@@ -73,19 +71,17 @@ git init
       open $current_directory/$folder_name/index.html
   else 
     echo "
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" type="text/css" href="./style/style.css">
-          <script 
-          <title>$folder_name</title>
-      </head>
-      <body>
-          
-      </body>
-      </html>" > index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <title>$folder_name</title>
+  </head>
+  <body> 
+  </body>
+</html>" > index.html
       mkdir style
       cd style
       # Create the style.css file
