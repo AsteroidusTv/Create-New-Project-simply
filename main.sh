@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-
-directory=/home/achille/Documents/Projects/Create-New-Project-simply
+directory="/home/achille/Documents/Projects/Bash/Create-New-Project-simply/"
 cd $directory
 
 # Variables
+
 file="./data/new_config.conf"
 app_dir="$HOME/.local/share/applications"
 

@@ -96,7 +96,6 @@ cd "$directory_path/$file_name"
       # Display a confirmation message
       echo "Folder '$folder_name' created successfully."
       echo "Files 'index.html' and 'style.css' have been created inside."
-
-      open $current_directory/$folder_name/index.html
+      open $PWD/index.html
       xdg-open .
     fi
