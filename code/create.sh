@@ -43,10 +43,14 @@ done
 lowercase_folder_name=$(echo "$folder_name" | tr '[:upper:]' '[:lower:]')
   
 # Check if the current directory is "html" or "Html"
-cd $current_dir
+cd "$current_dir"
 echo "file=\"$folder_name\"" >> ../data/new_config.conf
-./languages/$lowercase_folder_name.sh
+if [ -f "./languages/$lowercase_folder_name.sh" ]; then
+  ./languages/"$lowercase_folder_name.sh"
+else
+  echo "Script ./languages/$lowercase_folder_name.sh not found."
+fi
+
+# Supprimer la troisième ligne du fichier de configuration
 sed -i '3d' "../data/new_config.conf"
-
-
 

@@ -4,6 +4,7 @@ directory_path=$(grep "directory_path" "$config_file" | cut -d'=' -f2 | tr -d ' 
 file_name=$(grep "file" "$config_file" | cut -d'=' -f2 | tr -d ' ' | tr -d '"')
 code_choice=$(grep "code_choice" "$config_file" | cut -d'=' -f2 | tr -d ' ' | tr -d '"')
 
+echo $file_name
 cd "$directory_path/$file_name"
 
 # Ask the user for the folder name
@@ -15,9 +16,6 @@ cd "$directory_path/$file_name"
 
     # Move into the created folder
     cd "$folder_name"
-
-    #Initialize the file
-    git init
 
     # Create the index.html file
     read -p "Do you want to include a JavaScript file? (yes [Y]/no [N]): " include_js
@@ -103,6 +101,9 @@ cd "$directory_path/$file_name"
       
       # Open file explorer
       xdg-open .
+      
+      # Initilalise git
+      bash git init
 
       # Open IDE
       bash $code_choice "$directory_path/$file_name/$folder_name"
